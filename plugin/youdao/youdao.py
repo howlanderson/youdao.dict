@@ -22,6 +22,11 @@ else:
     json_data = f.read()
     json_object = json.loads(json_data)
     if not json_object['errorCode']: 
-        print (json_object['basic']['explains'][0]).encode('utf-8', 'ignore'), d(json_object['basic']['explains'][1]).encode('utf-8', 'ignore')
+        try:
+            translation_result = json_object['basic']['explains']
+        except Exception, e:
+            print 'some error happen'
+            sys.exit()
+        print (''.join(translation_result)).encode('utf-8', 'ignore')
     else:
         print 'api return error'
