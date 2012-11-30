@@ -1,7 +1,7 @@
 #what is youdao.dict
 yuodao.dict is a vim plugin for translation english to simplified chinese for chinese people
 #how to install
-go to plugin dir. put the file youdao.vim and youdao dir to your vim plugin dir.   
+go to plugin dir. put the file youdao.vim and youdao dir to your vim plugin dir.
 modified the youdao.py in youdao dir:
 
     6 # put your youdao api key here, you should keep it secret
@@ -12,3 +12,8 @@ modified the youdao.py in youdao dir:
 you should request the youdao translation api key and add to the youdao.py
 if you do not want request the youdao key, you can install the pyquery and lxml for python
 this plugin also work.
+
+#version 3
+1. add support for local dict "sdcv" 
+2. del the function that you can without key to use youdao api.
+from now, if you want use youdao dict, you should use the key
